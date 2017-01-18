@@ -2,6 +2,7 @@ package com.example.farhan.hospitalist;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,8 +39,18 @@ public class HospitalAdapter extends ArrayAdapter<Hospital> {
         TextView hospitalMobile = (TextView) listItemView.findViewById(R.id.hospital_mobile);
         hospitalMobile.setText(hospital.getHospitalNumber());
 
-        ImageView imageView = (ImageView ) listItemView.findViewById(R.id.hospital_call);
+        final ImageView imageView = (ImageView ) listItemView.findViewById(R.id.hospital_call);
         imageView.setImageResource(hospital.getHospitalCall());
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar snackbar = Snackbar
+                        .make(imageView, "Welcome to AndroidHive", Snackbar.LENGTH_LONG);
+
+                snackbar.show();
+            }
+        });
 
 
 
