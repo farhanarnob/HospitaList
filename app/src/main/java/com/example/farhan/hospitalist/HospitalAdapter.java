@@ -39,7 +39,7 @@ public class HospitalAdapter extends ArrayAdapter<Hospital> {
         hospitalMobile.setText(hospital.getHospitalNumber());
 
         ImageView imageView = (ImageView ) listItemView.findViewById(R.id.hospital_call);
-        imageView.setImageResource(Integer.parseInt(hospital.getHospitalCall()));
+        imageView.setImageResource(hospital.getHospitalCall());
 
 
 

@@ -19,10 +19,12 @@
             android:layout_height="0dp"
             android:layout_weight="4"/>
     </LinearLayout>
+
     <ImageView
         android:id="@+id/hospital_call"
         android:layout_weight="1"
         android:layout_width="0dp"
+        android:layout_gravity="center"
         android:layout_height="match_parent" />
 
 </LinearLayout>
