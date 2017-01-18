@@ -30,13 +30,13 @@ public class MainActivity extends AppCompatActivity {
         hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
 
         // Find a reference to the {@link ListView} in the layout
-        ListView earthquakeListView = (ListView) findViewById(R.id.list_item);
+        ListView hospitalListView = (ListView) findViewById(R.id.list_item);
 
         // Create a new {@link ArrayAdapter} of hospital
         HospitalAdapter  hospitalAdapter = new HospitalAdapter(this,hospitals);
 
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
-        earthquakeListView.setAdapter(hospitalAdapter);
+        hospitalListView.setAdapter(hospitalAdapter);
     }
 }
