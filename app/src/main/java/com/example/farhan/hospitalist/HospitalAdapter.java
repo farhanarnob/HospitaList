@@ -1,6 +1,8 @@
 package com.example.farhan.hospitalist;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
@@ -18,9 +20,10 @@ import java.util.ArrayList;
 
 public class HospitalAdapter extends ArrayAdapter<Hospital> {
 
-
+    Context context;
     public HospitalAdapter(Context context, ArrayList<Hospital> hospital) {
         super(context, 0, hospital);
+        this.context = context;
     }
 
     @NonNull
@@ -31,7 +34,7 @@ public class HospitalAdapter extends ArrayAdapter<Hospital> {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_view,parent,false);
         }
 
-        Hospital hospital = getItem(position);
+        final Hospital hospital = getItem(position);
 
         TextView hospitalName = (TextView) listItemView.findViewById(R.id.hospital_name);
         hospitalName.setText(hospital.getHospitalName()+"");
@@ -46,7 +49,15 @@ public class HospitalAdapter extends ArrayAdapter<Hospital> {
             @Override
             public void onClick(View view) {
                 Snackbar snackbar = Snackbar
-                        .make(imageView, "Welcome to AndroidHive", Snackbar.LENGTH_LONG);
+                        .make(imageView," do you want to call : "+ hospital.getHospitalNumber(),Snackbar.LENGTH_INDEFINITE)
+                        .setAction("Call", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts(
+                                        "tel", hospital.getHospitalNumber(), null));
+                                context.startActivity(intent);
+                            }
+                        });
 
                 snackbar.show();
             }

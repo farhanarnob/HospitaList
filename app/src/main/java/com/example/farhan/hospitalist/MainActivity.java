@@ -16,16 +16,16 @@ public class MainActivity extends AppCompatActivity {
         // Create a fake list of hospital locations.
         ArrayList<Hospital> hospitals = new ArrayList<>();
         hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
+        hospitals.add(new Hospital("Bardem","0175865",R.drawable.call));
+        hospitals.add(new Hospital("Bardem","01758665asdf",R.drawable.call));
+        hospitals.add(new Hospital("Bardem","01758655",R.drawable.call));
+        hospitals.add(new Hospital("Bardem","01755855",R.drawable.call));
+        hospitals.add(new Hospital("Bardem","0175855",R.drawable.call));
+        hospitals.add(new Hospital("Bardem","01758",R.drawable.call));
+        hospitals.add(new Hospital("Bardem","01758665",R.drawable.call));
+        hospitals.add(new Hospital("Bardem","01758",R.drawable.call));
         hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
-        hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
-        hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
-        hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
-        hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
-        hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
-        hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
-        hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
-        hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
-        hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
+        hospitals.add(new Hospital("Bardem","01758665",R.drawable.call));
         hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
         hospitals.add(new Hospital("Bardem","01758665855",R.drawable.call));
 
