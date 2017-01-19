@@ -89,6 +89,15 @@ public class DatabaseHandlerHospital extends SQLiteOpenHelper {
         // return contact list
         return hospitalList;
     }
+    boolean insertOrNot(){
+        String selectQuery = "SELECT  * FROM " + TABLE_CONTACTS;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.getCount()>0) {
+            return false;
+        }
+        return true;
+    }
 
 
     // Getting contacts Count

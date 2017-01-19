@@ -49,12 +49,12 @@ public class HospitalAdapter extends ArrayAdapter<Hospital> {
             @Override
             public void onClick(View view) {
                 Snackbar snackbar = Snackbar
-                        .make(imageView," do you want to call : "+ hospital.getHospitalNumber(),Snackbar.LENGTH_INDEFINITE)
+                        .make(imageView," do you want to call : "+ hospital.getHospitalNumber(),Snackbar.LENGTH_LONG)
                         .setAction("Call", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts(
-                                        "tel", hospital.getHospitalNumber(), null));
+                                        "tel", hospital.getHospitalName(), null));
                                 context.startActivity(intent);
                             }
                         });
