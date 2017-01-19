@@ -7,10 +7,9 @@ package com.example.farhan.hospitalist;
 public class Hospital {
     String hospitalName, hospitalNumber;
     int hospitalCall;
-    public Hospital(String hospitalName, String hospitalNumber, int hospitalCall){
+    public Hospital(String hospitalName, String hospitalNumber){
         this.hospitalName = hospitalName;
         this.hospitalNumber = hospitalNumber;
-        this.hospitalCall = hospitalCall;
     }
 
     public String getHospitalName() {
@@ -19,9 +18,6 @@ public class Hospital {
 
     public String getHospitalNumber() {
         return hospitalNumber;
-    }
-    public int getHospitalCall() {
-        return hospitalCall;
     }
 
 }
